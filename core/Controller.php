@@ -20,7 +20,6 @@ class Controller
 	 }
 
 	 public function display ($files = 'home/home.html') {
-		
 		$this->smarty->setTemplateDir('../templates/');
     	$this->smarty->setCompileDir('../templates_c/');
     	$this->smarty->setCacheDir('../cache/');
