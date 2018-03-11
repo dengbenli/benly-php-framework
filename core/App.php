@@ -11,16 +11,12 @@ class App
 		if (file_exists('../app/controller/' . $url[0] . '.php')) {
 			$this->controller = $url[0];
 			unset($url[0]);
-		} else {
-			die('未找到' . $url[0] . '.php 文件');
 		}
 		require_once('../app/controller/' . $this->controller . '.php');
 		$this->controller = new $this->controller;
 		if (isset($url[1]) && method_exists($this->controller, $url[1])) {
 			$this->method = $url[1];
 			unset($url[1]);
-		} else {
-			die('未找到' . $url[1] . '方法');
 		}
 		$this->params = $url ? array_values($url) : array();
 		call_user_func_array(array($this->controller, $this->method), $this->params);
