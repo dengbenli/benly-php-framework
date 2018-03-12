@@ -1,11 +1,5 @@
 {
      "require": {
-      	"smarty/smarty": "~3.1",
-      	"illuminate/database": "4.2.*"
-     },
-     "autoload" : {
-     	"calssmap" : [
-     		"app/modules"
-     	]
+      	"smarty/smarty": "~3.1"
      }
  }
