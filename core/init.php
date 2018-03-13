@@ -23,3 +23,5 @@ $mysql = new Mysql(
 	$databases['port'],
 	$databases['charset']
 );
+// init modules
+$model = new Model;
